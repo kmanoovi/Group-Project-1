@@ -4,6 +4,8 @@ This application allows users to search a movie or genre of their choice and a f
 will appear. Once the film(s) appear on the screen, links will also be provided for where the user can
 stream the film(s).
 
+# Screenshots
+
 ## User Story
 
 * As a casual movie viewer, I want to look up a movie or genre and be presented with a description of the film
@@ -13,9 +15,17 @@ or given an array of films to choose from.
 
 ## Criteria
 
-GIVEN: I am presented with a webpage titled, “Reel Reviews”
-THEN: I am presented with a search form with search options including “search by genre” and “search by title”
-GIVEN: My search criteria is entered in the search box and selected search options have been checked off
+GIVEN: I open a webpage entitled, "Reel Reviews".
+THEN: I am presented with a search form to either search a specific film or click a checkbox for a certain genre of film.
+GIVEN: My search criteria is entered in the search box and selected genre options have been checked off.
 THEN: I am presented with a list of movie titles and reviews based on my search criteria.
-GIVEN: A list of movie titles and reviews
+GIVEN: A list of movie titles and reviews.
 THEN: I am presented with the ability to view where selected movies are available to stream.
+GIVEN: At the end of the page, I am able to see my past searches.
+
+## Notes
+
+* 2 API's were used, one for receiving data for movie reviews and the other for receiving data about where
+the selected movies can be streamed.
+
+* Bulma is the CSS framework that was used to design the layout of Reel Reviews.
