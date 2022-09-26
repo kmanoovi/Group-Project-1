@@ -29,3 +29,9 @@ GIVEN: At the end of the page, I am able to see my past searches.
 the selected movies can be streamed.
 
 * Bulma is the CSS framework that was used to design the layout of Reel Reviews.
+
+### Links
+
+* Link to Repo: (https://github.com/kmanoovi/Reel-Reviews/branches).
+
+* Link to Pages: (https://kmanoovi.github.io/Reel-Reviews/).
