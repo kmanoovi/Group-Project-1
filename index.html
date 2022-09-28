@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,53 +14,80 @@
     <link rel="icon" href="./assets/images/snail icon.png">
     <title>Reel Reviews</title>
 </head>
+
 <body>
-    <section class="hero is-medium is-link">
-        <div class="hero-body">
-          <p class="title">
-            Reel Reviews
-          </p>
-          <p class="subtitle">
-            As reel as it gets ;)
-          </p>
+    <!-- <section class="hero is-medium is-link">
+        <div class="hero-body"> -->
+            <div class="hero-image">
+                <div class="hero-text">
+                  <h1>Reel Reviews</h1>
+                  <p>Your go-to movie review and streaming database all in one place</p>
+                  <button id="titleSearch">Search a movie by title</button>
+                </div>
+              </div>
+            <!-- <p class="title">
+                Reel Reviews
+            </p>
+            <p class="subtitle">
+                As reel as it gets ;)
+            </p> -->
         </div>
     </section>
     <div class="columns">
-        <div class="column is-one-third"><div class = "input-link">
-            <input class="input is-link is-one-third column" id="searchbar" type="text" placeholder="Movie Title">
+        <div class="column is-one-third">
+            <div class="input-link">
+                <input class="input is-link is-one-third column" id="searchbar" type="text" placeholder="Link input">
+            </div>
+            <div class="genre column">
+                <label class="checkbox is-3 column">
+                    <input type="checkbox">
+                    Horror
+                </label>
+                <label class="checkbox is-3 column">
+                    <input type="checkbox">
+                    Comedy
+                </label>
+                <label class="checkbox is-3 column">
+                    <input type="checkbox">
+                    Action
+                </label>
+                <label class="checkbox is-3 column">
+                    <input type="checkbox">
+                    Romance
+                </label>
+                <label class="checkbox is-3 column">
+                    <input type="checkbox">
+                    Drama
+                </label>
+            </div>
+            <div class="submit-button">
+                <button class="button submit-button is-link is-light">Submit</button>
+            </div>
         </div>
-        <div class="genre column">
-        <label class="checkbox is-2 column">
-            <input type="checkbox">
-            Horror
-        </label>
-        <label class="checkbox is-2 column">
-            <input type="checkbox">
-            Comedy
-        </label>
-        <label class="checkbox is-3 column">
-            <input type="checkbox">
-            Action
-        </label>
-        <label class="checkbox is-3 column">
-            <input type="checkbox">
-            Romance
-        </label>
-        <label class="checkbox is-2 column">
-            <input type="checkbox">
-            Drama
-        </label>
-        </div>
-        <div id="submit-button">
-            <button class="button is-link is-light">Submit</button>
-        </div>
-        <div class="column"></div>
-        <div class="column"></div>
-      </div>
+        <div class="column has-background-info has-background-info-dark resultsbox"></div>
+        <div class="column has-background-info has-background-danger-light streamingbox"></div>
+    </div>
     <div class="result">
 
+        <div class="columns">
+            <div class="column historycolumn has-background-danger-light is-narrow">
+              <div class="box" style="width: 400px;">
+                <p class="title is-5">Search history:</p>
+                <p class="subtitle">Insert search history to display through JS</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="box tbdcolumn has-background-info-dark">
+                <p class="title is-5">TBD column</p>
+                <p class="subtitle">This column will take up the remaining space available.</p>
+              </div>
+            </div>
+          </div>
     </div>
-    <div id="search-history"></div>
+    <div id="search-history">
+
+    </div>
     <script src="./assets/java/script.js"></script>
 </body>
+
 </html>
