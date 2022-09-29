@@ -5,12 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://api.watchmode.com/"
-    rel="stylesheet" />
-    <link href="https://omdbapi.com/"
-        rel="stylesheet" />
+    <link href="https://api.watchmode.com/" rel="stylesheet" />
+    <link href="https://omdbapi.com/" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel ="stylesheet" href="./assets/bulma/css/bulma.css">
+    <link rel="stylesheet" href="./assets/bulma/css/bulma.css">
     <link rel="icon" href="./assets/images/snail icon.png">
     <title>Reel Reviews</title>
 </head>
@@ -18,20 +16,20 @@
 <body>
     <!-- <section class="hero is-medium is-link">
         <div class="hero-body"> -->
-            <div class="hero-image">
-                <div class="hero-text">
-                  <h1>Reel Reviews</h1>
-                  <p>Your go-to movie review and streaming database all in one place</p>
-                  <button id="titleSearch">Search a movie by title</button>
-                </div>
-              </div>
-            <!-- <p class="title">
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1>Reel Reviews</h1>
+            <p>Your go-to movie review and streaming database all in one place</p>
+            <button id="titleSearch">Search a movie by title</button>
+        </div>
+    </div>
+    <!-- <p class="title">
                 Reel Reviews
             </p>
             <p class="subtitle">
                 As reel as it gets ;)
             </p> -->
-        </div>
+    </div>
     </section>
     <div class="columns">
         <div class="column is-one-third"><div class = "input-link">
@@ -70,7 +68,7 @@
     
         <div class="column is-one-third">
             <div class="input-link">
-                <input class="input is-link is-one-third column" id="searchbar" type="text" placeholder="Link input">
+                <input class="input is-link is-one-third column" id="searchbar" type="text" placeholder="Movie title">
             </div>
             <div class="genre column">
                 <label class="checkbox is-3 column">
@@ -87,7 +85,7 @@
                 </label>
                 <label class="checkbox is-3 column">
                     <input type="checkbox">
-                    Romance
+                    Indie
                 </label>
                 <label class="checkbox is-3 column">
                     <input type="checkbox">
@@ -98,25 +96,25 @@
                 <button class="button submit-button is-link is-light">Submit</button>
             </div>
         </div>
-        <div class="column has-background-info has-background-info-dark resultsbox"></div>
-        <div class="column has-background-info has-background-danger-light streamingbox"></div>
+        <div class="column has-background-dark has-text-white-ter resultsbox">
+            <h1>Review data:</h1>
+            <p id="reviewsBox"></p>
+        </div>
+        <div class="column has-background-dark has-text-white-ter streamingbox">
+            <h1>Streaming data:</h1>
+            <p id="streamBox"></p>
+        </div>
     </div>
     <div class="result">
 
         <div class="columns">
-            <div class="column historycolumn has-background-danger-light is-narrow">
-              <div class="box" style="width: 400px;">
-                <p class="title is-5">Search history:</p>
-                <div id="search-history"></div>
-              </div>
+            <div class="column historycolumn has-background-grey-light is-narrow">
+                <div class="box" style="width: 400px;">
+                    <p class="title is-5">Search history:</p>
+                    <div id="search-history"></div>
+                </div>
             </div>
-            <div class="column">
-              <div class="box tbdcolumn has-background-info-dark">
-                <p class="title is-5">TBD column</p>
-                <p class="subtitle">This column will take up the remaining space available.</p>
-              </div>
-            </div>
-          </div>
+        </div>
     </div>
     <script src="./assets/java/script.js"></script>
 </body>
