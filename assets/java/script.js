@@ -2,7 +2,7 @@ var watchMode = "cNHgc2tlBjDMC5uBwxaTOiQW7JcNPhnKgLdML3Si";
 var omdb = "140f259f";
 
 var userInput = document.querySelector("#searchbar");
-var submitButton = document.querySelector("#submit-button");
+var submitButton = document.querySelector("#submit");
 var SearchHistory = document.querySelector("#search-history");
 
 if(localStorage.getItem("storedList") !== null) {
@@ -25,22 +25,22 @@ function HistoryEntry() {
     newContainer.classList.add("button");
     newContainer.classList.add("is-link");
     newContainer.classList.add("is-light");
+    newContainer.classList.add("column");
+    newContainer.classList.add("is-full");
     newContainer.textContent = userInput.value;
 
     for(i=0;i<SearchHistory.children.length;i++) {
         if(SearchHistory.children[i].textContent == userInput.value) {
             SearchHistory.children[i].remove();
-            SearchHistory.prepend(newContainer);
-            console.log("A");
         }
     }
 
     SearchHistory.prepend(newContainer);
+
     if(SearchHistory.children.length>5) {
         SearchHistory.children[5].remove();
     }
 
-    console.log(SearchHistory.innerHTML);
     saveHistory();
 }
 
