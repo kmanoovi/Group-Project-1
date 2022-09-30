@@ -52,6 +52,7 @@ html {
 }
 
 .hero-text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 30px;
     text-align: center;
     position: absolute;
@@ -74,6 +75,11 @@ html {
     color: white;
 }
 
+#submit {
+    background-color: rgb(217, 180, 127);
+    color: rgb(115, 99, 78);
+    border-color: rgb(115, 99, 78);
+}
 .movie-entry {
     margin-top: 5px;
 }

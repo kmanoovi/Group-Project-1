@@ -20,7 +20,6 @@
         <div class="hero-text">
             <h1>Reel Reviews</h1>
             <p>Your go-to movie review and streaming database all in one place</p>
-            <button id="titleSearch">Search a movie by title</button>
         </div>
     </div>
     <!-- <p class="title">
@@ -67,10 +66,14 @@
         
     
         <div class="column is-one-third">
-            <div class="input-link">
-                <input class="input is-link is-one-third column" id="searchbar" type="text" placeholder="Movie title">
+            <div class="input-link columns">
+                <input class="input is-link is-three-fifths column" id="searchbar" type="text"
+                    placeholder="Movie title">
+                <div class="submit-button">
+                    <button id="submit" class="button submit-button">Submit</button>
+                </div>
             </div>
-            <div class="genre column">
+            <!-- <div class="genre column">
                 <label class="checkbox is-3 column">
                     <input type="checkbox">
                     Horror
@@ -91,10 +94,10 @@
                     <input type="checkbox">
                     Drama
                 </label>
-            </div>
-            <div id="submit" class="submit-button">
-                <button class="button submit-button is-link is-light">Submit</button>
-            </div>
+            </div> -->
+            <!-- <div class="submit-button">
+                <button id="submit" class="button submit-button is-link is-light">Submit</button>
+            </div> -->
         </div>
         <div class="column has-background-dark has-text-white-ter resultsbox">
             <h1>Review data:</h1>
