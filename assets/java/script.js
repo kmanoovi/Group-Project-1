@@ -1,6 +1,6 @@
 var watchMode = "cNHgc2tlBjDMC5uBwxaTOiQW7JcNPhnKgLdML3Si";
 var omdb = "140f259f";
-
+var inputValue = document.getElementById("userInput");
 var userInput = document.querySelector("#searchbar");
 var submitButton = document.querySelector("#submit");
 var SearchHistory = document.querySelector("#search-history");
