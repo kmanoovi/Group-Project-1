@@ -79,6 +79,7 @@ html {
     background-color: rgb(217, 180, 127);
     color: rgb(115, 99, 78);
     border-color: rgb(115, 99, 78);
+    height: 30px;
 }
 .movie-entry {
     margin-top: 5px;
@@ -90,4 +91,13 @@ html {
 
 .genre {
     text: hsl(0, 0%, 96%);
+}
+
+#userInput {
+    height: 30px;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
 }
