@@ -4,7 +4,7 @@ var submitButton = document.querySelector("#submit");
 var SearchHistory = document.querySelector("#search-history");
 var content = document.getElementById("results");
 
-
+// search history:
 if(localStorage.getItem("storedList") !== null) {
     SearchHistory.innerHTML = JSON.parse(localStorage.getItem("storedList"))
 }

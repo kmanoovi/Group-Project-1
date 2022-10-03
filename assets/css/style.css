@@ -27,13 +27,6 @@
     margin: 15px;
 }
 
-/* .transparentimage {
-    body {
-        background: url("transparent1.png") rgba(0, 0, 0, 0),
-                    url("transparent2.png") rgba(0, 0, 0, 0);
-      }
-} */
-
 body,
 html {
     height: 110%;
@@ -62,6 +55,7 @@ html {
     color: white;
 }
 
+/* search area/parameters: */
 #titleSearch {
     font-size: 15px;
     transition-duration: 0.4s;
