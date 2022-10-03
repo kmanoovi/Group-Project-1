@@ -1,8 +1,8 @@
 var inputValue = document.getElementById("userInput");
-var userInput = document.querySelector("#searchbar");
 var submitButton = document.querySelector("#submit");
 var SearchHistory = document.querySelector("#search-history");
 var content = document.getElementById("results");
+var streamingResults = document.getElementById("streaming-results");
 
 // search history:
 if(localStorage.getItem("storedList") !== null) {
@@ -14,14 +14,12 @@ SearchHistory
 submitButton.addEventListener("click", function (){
     runSearch();
     console.log("button clicked");
-    userInput= inputValue.value;
-    console.log(userInput);
-    omdbCall(userInput);
+    omdbCall(inputValue.value);
     
 })
 
 function runSearch() {
-    //Kristry's function to run API functions
+    omdbCall();
     HistoryEntry();
     
 }
@@ -34,10 +32,10 @@ function HistoryEntry() {
     newContainer.classList.add("is-light");
     newContainer.classList.add("column");
     newContainer.classList.add("is-full");
-    newContainer.textContent = userInput.value;
+    newContainer.textContent = inputValue.value;
 
     for(i=0;i<SearchHistory.children.length;i++) {
-        if(SearchHistory.children[i].textContent == userInput.value) {
+        if(SearchHistory.children[i].textContent == inputValue.value) {
             SearchHistory.children[i].remove();
         }
     }
@@ -69,7 +67,7 @@ function omdbCall(parameter){
     .then(response => response.json())
     .then(data => {
         console.log(data);
-        content.innerHTML = ""
+        content.innerHTML = "";
         var newH3 = document.createElement("h3");
         newH3.textContent = data.Title;
         var newImg = document.createElement("img");
@@ -110,7 +108,7 @@ function omdbCall(parameter){
                 newStreaming.textContent = streamingData[i].name;
                 newStreaming.href = streamingData[i].web_url;
     
-                content.append(newStreaming);
+                streamingResults.append(newStreaming);
 
             }
             console.log(streaming);

@@ -29,7 +29,7 @@
 
 body,
 html {
-    height: 110%;
+    height: 150%;
     background-color: hsl(0, 0%, 7%);
 }
 
@@ -37,7 +37,7 @@ html {
 .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://p4.wallpaperbetter.com/wallpaper/143/51/723/circle-closeup-depth-of-field-film-reel-wallpaper-preview.jpg");
     margin-bottom: 15px;
-    height: 50%;
+    height: 450px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -73,6 +73,7 @@ html {
     background-color: rgb(217, 180, 127);
     color: rgb(115, 99, 78);
     border-color: rgb(115, 99, 78);
+    height: 30px;
 }
 .movie-entry {
     margin-top: 5px;
@@ -84,4 +85,13 @@ html {
 
 .genre {
     text: hsl(0, 0%, 96%);
+}
+
+#userInput {
+    height: 30px;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
 }

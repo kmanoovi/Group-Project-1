@@ -31,26 +31,13 @@
 
             </div>
             <div class="input-link columns">
-                <input class="input is-link is-three-fifths column" id="searchbar" type="text"
+                <input class="input is-link is-three-fifths column" id="userInput" type="text"
                     placeholder="Movie title">
                 <div class="submit-button">
                     <button id="submit" class="button submit-button">Submit</button>
                 </div>
             </div>
-
-        </div>
-        <div class="column has-background-dark has-text-white-ter resultsbox">
-            <h1>Review data:</h1>
-            <p id="reviewsBox"></p>
-        </div>
-        <div class="column has-background-dark has-text-white-ter streamingbox">
-            <h1>Streaming data:</h1>
-            <p id="streamBox"></p>
-        </div>
-    </div>
-    <div class="result">
-
-        <!-- search history column: -->
+                    <!-- search history column: -->
         <div class="columns">
             <div class="column historycolumn has-background-grey-light is-narrow">
                 <div class="box" style="width: 400px;">
@@ -59,6 +46,20 @@
                 </div>
             </div>
         </div>
+
+        </div>
+        <div class="column has-background-dark has-text-white-ter resultsbox" id="results">
+            <h1>Review data:</h1>
+            <p id="reviewsBox"></p>
+        </div>
+        <div class="column has-background-dark has-text-white-ter streamingbox" id="streaming-results">
+            <h1>Streaming data:</h1>
+            <p id="streamBox"></p>
+        </div>
+    </div>
+    <div class="result">
+
+
     </div>
     <script src="./assets/java/script.js"></script>
 </body>
