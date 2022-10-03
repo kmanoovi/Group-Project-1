@@ -1,12 +1,10 @@
-var watchMode = "cNHgc2tlBjDMC5uBwxaTOiQW7JcNPhnKgLdML3Si";
-var omdb = "140f259f";
 var inputValue = document.getElementById("userInput");
-var userInput = document.querySelector("#searchbar");
 var submitButton = document.querySelector("#submit");
 var SearchHistory = document.querySelector("#search-history");
 var content = document.getElementById("results");
+var streamingResults = document.getElementById("streaming-results");
 
-
+// search history:
 if(localStorage.getItem("storedList") !== null) {
     SearchHistory.innerHTML = JSON.parse(localStorage.getItem("storedList"))
 }
@@ -16,14 +14,12 @@ SearchHistory
 submitButton.addEventListener("click", function (){
     runSearch();
     console.log("button clicked");
-    userInput= inputValue.value;
-    console.log(userInput);
-    omdbCall(userInput);
-     // watchModeCall(userInput);
+    omdbCall(inputValue.value);
+    
 })
 
 function runSearch() {
-    //Kristry's function to run API functions
+    omdbCall();
     HistoryEntry();
     
 }
@@ -36,10 +32,10 @@ function HistoryEntry() {
     newContainer.classList.add("is-light");
     newContainer.classList.add("column");
     newContainer.classList.add("is-full");
-    newContainer.textContent = userInput.value;
+    newContainer.textContent = inputValue.value;
 
     for(i=0;i<SearchHistory.children.length;i++) {
-        if(SearchHistory.children[i].textContent == userInput.value) {
+        if(SearchHistory.children[i].textContent == inputValue.value) {
             SearchHistory.children[i].remove();
         }
     }
@@ -66,12 +62,12 @@ function omdbCall(parameter){
     var omdb = "c56181db"
     const apiURL ="https://www.omdbapi.com/?t="+ parameter + "&apikey="+ omdb;
     
-
-fetch(apiURL)
+    
+    fetch(apiURL)
     .then(response => response.json())
     .then(data => {
         console.log(data);
-        content.innerHTML = ""
+        content.innerHTML = "";
         var newH3 = document.createElement("h3");
         newH3.textContent = data.Title;
         var newImg = document.createElement("img");
@@ -82,6 +78,10 @@ fetch(apiURL)
         newP2.textContent = data.Rated;
         var newP3 = document.createElement("p");
         newP3.textContent = data.Ratings[0].Source + data.Ratings[0].Value;
+        
+        
+        var watchMode = "cNHgc2tlBjDMC5uBwxaTOiQW7JcNPhnKgLdML3Si";
+        const apiURL2 = "https://api.watchmode.com/v1/title/"+ data.imdbID + "/sources/?apiKey=" + watchMode;
 
         content.append(newH3)
         content.append(newImg)
@@ -89,22 +89,33 @@ fetch(apiURL)
         content.append(newP2)
         content.append(newP3)
         
+
+        fetch(apiURL2)
+        .then(response => response.json())
+        .then(secondData => {
+            var streaming = [];
+            var streamingData = [];
+            for(i=0; i< secondData.length; i++){
+                if(!streaming.includes(secondData[i].name)){
+                    streaming.push(secondData[i].name)
+                    streamingData.push(secondData[i])
+                }
+                
+
+            }
+            for(i=0; i<streamingData.length; i++){
+                var newStreaming = document.createElement("a");
+                newStreaming.textContent = streamingData[i].name;
+                newStreaming.href = streamingData[i].web_url;
+    
+                streamingResults.append(newStreaming);
+
+            }
+            console.log(streaming);
+            console.log(streamingData);
+            console.log(secondData);
+            
+        })
     })
 }
 
-// testing function not ready yet-Kristy
-// function watchModeCall(parameter){
-//     var watchMode = "cNHgc2tlBjDMC5uBwxaTOiQW7JcNPhnKgLdML3Si";
-//     const apiURL ="https://watchmode.com/v1/title/{title_id}/sources/?apiKey=" + watchMode + "&";
-//     parameter;
-
-// fetch(apiURL)
-//     .then(response => response.json())
-//     .then(data => {
-//         console.log(data);
-//         console.log(data.Title);
-//         console.log(data.Actors);
-//         result.textContent = data.Title;
-//         //create containers to hold more data
-//     })
-// }

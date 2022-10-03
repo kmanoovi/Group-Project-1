@@ -12,60 +12,55 @@
     <link rel="icon" href="./assets/images/snail icon.png">
     <title>Reel Reviews</title>
 </head>
-
+<!-- Title and BG image: -->
 <body>
-    <!-- <section class="hero is-medium is-link">
-        <div class="hero-body"> -->
     <div class="hero-image">
         <div class="hero-text">
             <h1>Reel Reviews</h1>
             <p>Your go-to movie review and streaming database all in one place</p>
-            <button id="titleSearch">Search a movie by title</button>
         </div>
     </div>
-    <!-- <p class="title">
-                Reel Reviews
-            </p>
-            <p class="subtitle">
-                As reel as it gets ;)
-            </p> -->
+
     </div>
 
-    <section class="columns">
-        <div class="columns column is-one-third flex-wrap">
-            
-                <input class="column is-two-thirds" id ="userInput" type="text" placeholder="Enter Movie Title">
-                <button class="column is-one-third" id="submit">Submit</button>
+    <!-- Columns, input box, button, results boxes: -->
+    </section>
+    <div class="columns">
+        <div class="column is-one-third">
+            <div class="input-link">
 
-                
-            <div class="columns">
-                <div class="column is-full">
-                    <div>
-                        <p class="title is-5">Search history:</p>
-                        <div id="search-history"></div>
-                    </div>
+            </div>
+            <div class="input-link columns">
+                <input class="input is-link is-three-fifths column" id="userInput" type="text"
+                    placeholder="Movie title">
+                <div class="submit-button">
+                    <button id="submit" class="button submit-button">Submit</button>
                 </div>
+            </div>
+                    <!-- search history column: -->
+        <div class="columns">
+            <div class="column historycolumn has-background-grey-light is-narrow">
+                <div class="box" style="width: 400px;">
+                    <p class="title is-5">Search history:</p>
+                    <div id="search-history"></div>
+                </div>
+            </div>
         </div>
 
-        <div class="result" id="results">
-
         </div>
-
-        </div>
-        <div class="column has-background-dark has-text-white-ter resultsbox">
+        <div class="column has-background-dark has-text-white-ter resultsbox" id="results">
             <h1>Review data:</h1>
             <p id="reviewsBox"></p>
         </div>
-        <div class="column has-background-dark has-text-white-ter streamingbox">
+        <div class="column has-background-dark has-text-white-ter streamingbox" id="streaming-results">
             <h1>Streaming data:</h1>
             <p id="streamBox"></p>
         </div>
     </div>
     <div class="result">
-        </div>
-    </div>
-    </section>
 
+
+    </div>
     <script src="./assets/java/script.js"></script>
 </body>
 
