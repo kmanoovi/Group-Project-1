@@ -95,6 +95,8 @@ function omdbCall(parameter){
         .then(secondData => {
             var streaming = [];
             var streamingData = [];
+            streamingResults.innerHTML = "";
+
             for(i=0; i< secondData.length; i++){
                 if(!streaming.includes(secondData[i].name)){
                     streaming.push(secondData[i].name)
@@ -105,6 +107,7 @@ function omdbCall(parameter){
             }
             for(i=0; i<streamingData.length; i++){
                 var newStreaming = document.createElement("a");
+                newStreaming.setAttribute("target", "_blank");
                 newStreaming.textContent = streamingData[i].name;
                 newStreaming.href = streamingData[i].web_url;
     
@@ -118,4 +121,3 @@ function omdbCall(parameter){
         })
     })
 }
-
